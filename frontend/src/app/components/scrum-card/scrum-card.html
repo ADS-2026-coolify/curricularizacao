@@ -1,0 +1,8 @@
+<div class="p-6 bg-white rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 h-full">
+  <h5 [ngClass]="isSmall ? 'text-sm' : 'text-lg'" class="font-bold text-fema-orange mb-3">
+    {{ title }}
+  </h5>
+  <p [ngClass]="isSmall ? 'text-xs' : 'text-sm'" class="text-slate-600 leading-relaxed text-justify">
+    <ng-content></ng-content>
+  </p>
+</div>

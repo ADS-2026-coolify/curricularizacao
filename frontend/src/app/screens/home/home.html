@@ -1,0 +1,653 @@
+<app-navbar></app-navbar>
+
+<app-hero-section></app-hero-section>
+<app-wrapper-content>
+  <app-title-main
+    subdescription="Contexto Histórico"
+    maindescription="Como essa revolução começou?"
+  >
+  </app-title-main>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+    <div class="space-y-6 text-base md:text-lg leading-relaxed text-slate-600 order-1">
+      <p>
+        Essa mudança não surgiu do nada. Ela foi uma resposta direta aos problemas que travavam o
+        desenvolvimento de software,
+        <b class="text-fema-blue border-b-2 border-fema-orange/30"
+          >principalmente entre os anos 80 e 90</b
+        >.
+      </p>
+      <p>
+        Naquela época, o padrão era o
+        <span class="font-bold text-slate-800 italic">"Modelo em Cascata" (Waterfall)</span>.
+        Imagine uma escada onde você só pode descer: uma fase precisa terminar completamente para a
+        próxima começar.
+      </p>
+
+      <div class="bg-red-50 border-l-4 border-red-500 p-5 md:p-6 rounded-r-xl">
+        <h4 class="font-bold text-red-800 mb-2 text-base md:text-lg">O Grande Risco:</h4>
+        <p class="text-sm md:text-base text-red-700">
+          O cliente fechava um contrato de meses e só via o sistema pronto no último dia. Se nesse
+          meio tempo o mercado mudasse, o software já nascia inútil.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col gap-3 bg-white p-5 md:p-8 rounded-3xl shadow-inner border border-gray-100 order-2 overflow-x-hidden items-center lg:items-start"
+    >
+      <div class="flex flex-col gap-3 w-full max-w-[280px] md:max-w-none md:w-auto">
+        <div
+          class="bg-slate-400 text-white p-3 md:p-4 rounded-lg shadow-md w-[200px] md:w-64 transform hover:translate-x-2 transition-transform cursor-default self-start"
+        >
+          <h3 class="font-bold flex items-center gap-2 text-xs md:text-base">
+            <span>1.</span> Requisitos
+          </h3>
+          <p class="text-[9px] md:text-xs opacity-80 text-left">Planejar e definir tudo</p>
+        </div>
+
+        <div
+          class="bg-slate-500 text-white p-3 md:p-4 rounded-lg shadow-md w-[200px] md:w-64 ml-4 md:ml-12 transform hover:translate-x-2 transition-transform cursor-default self-start"
+        >
+          <h3 class="font-bold flex items-center gap-2 text-xs md:text-base">
+            <span>2.</span> Design
+          </h3>
+          <p class="text-[9px] md:text-xs opacity-80 text-left">Desenhar a arquitetura</p>
+        </div>
+
+        <div
+          class="bg-slate-600 text-white p-3 md:p-4 rounded-lg shadow-md w-[200px] md:w-64 ml-8 md:ml-24 transform hover:translate-x-2 transition-transform cursor-default self-start"
+        >
+          <h3 class="font-bold flex items-center gap-2 text-xs md:text-base">
+            <span>3.</span> Implementação
+          </h3>
+          <p class="text-[9px] md:text-xs opacity-80 text-left">Desenvolver o código todo</p>
+        </div>
+
+        <div
+          class="bg-slate-700 text-white p-3 md:p-4 rounded-lg shadow-md w-[200px] md:w-64 ml-12 md:ml-36 transform hover:translate-x-2 transition-transform cursor-default self-start"
+        >
+          <h3 class="font-bold flex items-center gap-2 text-xs md:text-base">
+            <span>4.</span> Testes
+          </h3>
+          <p class="text-[9px] md:text-xs opacity-80 text-left">Testar só no final</p>
+        </div>
+
+        <div
+          class="bg-slate-800 text-white p-3 md:p-4 rounded-lg shadow-md w-[200px] md:w-64 ml-16 md:ml-48 transform hover:translate-x-2 transition-transform cursor-default self-start"
+        >
+          <h3 class="font-bold flex items-center gap-2 text-xs md:text-base">
+            <span>5.</span> Implantação
+          </h3>
+          <p class="text-[9px] md:text-xs opacity-80 text-left">Entregar para o cliente</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-wrapper-content>
+
+<app-call-action
+  title="
+Software é um organismo vivo, por que tratá-lo como um prédio?"
+  description="  O nascimento do manifesto ágil"
+>
+</app-call-action>
+
+<app-tittle-section
+  title="a virada de chave"
+  description="a mentalidade ágil"
+  subdescription="Em 2001, um grupo de desenvolvedores cansados do modelo antigo criou o Manifesto Ágil, priorizando 4 valores : "
+>
+</app-tittle-section>
+
+<app-wrapper-content>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <app-feature-card icon="🤝" title="Interações">
+      Pessoas e conversas valem mais do que processos engessados e ferramentas complexas.
+    </app-feature-card>
+
+    <app-feature-card icon="💻" title="Software Útil">
+      Ter um software que funciona na mão do cliente é mais importante do que manuais gigantescos.
+    </app-feature-card>
+    <app-feature-card icon="🚀" title="Adaptação">
+      Ter um software que funciona na mão do cliente é mais importante do que manuais gigantescos.
+    </app-feature-card>
+    <app-feature-card icon="📝" title="Colaboração">
+      Atender ao que o cliente precisa, dando vantagem estratégica, é mais que seguir um contrato
+    </app-feature-card>
+  </div>
+
+  <app-tittle-section
+    description="Os 12 Príncipios"
+    subdescription=" A aplicação prática da filosofia ágil no dia a dia do desenvolvimento. "
+  >
+  </app-tittle-section>
+
+  <!-- Grid dos 12 Princípios -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+    <app-feature-card icon="💎" title="Satisfação do Cliente">
+      Prioridade na entrega adiantada e contínua de software de valor.
+    </app-feature-card>
+
+    <app-feature-card icon="🔄" title="Mudanças">
+      Mudanças de requisitos são bem-vindas para a vantagem competitiva do cliente.
+    </app-feature-card>
+
+    <app-feature-card icon="⏱️" title="Entregas Frequentes">
+      Software funcionando em intervalos de poucas semanas ou meses.
+    </app-feature-card>
+
+    <app-feature-card icon="🏠" title="Trabalho em Conjunto">
+      Negócio e desenvolvedores trabalhando juntos diariamente.
+    </app-feature-card>
+
+    <app-feature-card icon="🔥" title="Confiança">
+      Projetos em torno de pessoas motivadas com o suporte necessário.
+    </app-feature-card>
+
+    <app-feature-card icon="🗣️" title="Conversa Direta">
+      O método mais eficiente é a conversa cara a cara.
+    </app-feature-card>
+
+    <app-feature-card icon="⚙️" title="Software Funcional">
+      Software funcionando é a medida primária de progresso.
+    </app-feature-card>
+
+    <app-feature-card icon="🏃" title="Sustentabilidade">
+      Manter um ritmo constante de desenvolvimento indefinidamente.
+    </app-feature-card>
+
+    <app-feature-card icon="🎨" title="Excelência">
+      Atenção contínua à excelência técnica e bom design.
+    </app-feature-card>
+
+    <app-feature-card icon="🧘" title="Simplicidade">
+      Maximizar a quantidade de trabalho não realizado.
+    </app-feature-card>
+
+    <app-feature-card icon="🏗️" title="Auto-organização">
+      As melhores arquiteturas surgem de times auto-organizados.
+    </app-feature-card>
+
+    <app-feature-card icon="📉" title="Ajustes">
+      Refletir regularmente sobre como ser mais eficaz e ajustar.
+    </app-feature-card>
+  </div>
+  <div
+    class="mt-20 text-center max-w-3xl mx-auto bg-gray-50 p-8 rounded-2xl border border-dashed border-gray-300"
+  >
+    <p class="text-lg italic text-gray-600 leading-relaxed">
+      "No Ágil trabalhamos em ciclos curtos. O cliente vê o sistema crescendo e ajusta o rumo."
+    </p>
+  </div>
+</app-wrapper-content>
+
+<app-call-action
+  title="O Manifesto Ágil não é uma metodologia de processo"
+  description="Mas sim o alicerce essencial para o surgimento de diversos métodos."
+></app-call-action>
+
+<app-wrapper-content>
+  <app-title-main
+    subdescription="Metodologias ágeis"
+    maindescription="Como nasceram as metodologias ágeis mais famosas?"
+  ></app-title-main>
+
+  <div class="space-y-6 text-lg leading-relaxed text-slate-600 mb-16">
+    <p>
+      Muitas metodologias beberam da fonte da filosofia ágil e, a partir daí, criaram ótimas
+      metodologias de processo que são usadas em grandes empresas até hoje. Dentro deste curso,
+      focaremos nas mais populares:
+      <b class="text-fema-blue border-b-2 border-fema-orange/30">Scrum, XP e Kanban</b>.
+    </p>
+  </div>
+
+  <app-tittle-section
+    description="SCRUM"
+    subdescription="A arte de fazer o dobro do trabalho na metade do tempo."
+  >
+  </app-tittle-section>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16">
+    <!-- Lado Esquerdo: Texto Histórico -->
+    <div class="space-y-6 text-lg leading-relaxed text-slate-600">
+      <p>
+        O Scrum não nasceu diretamente com o Manifesto Ágil — ele já vinha sendo desenvolvido antes.
+        Em 1986,
+        <span class="font-bold text-slate-800 italic">Hirotaka Takeuchi</span> e
+        <span class="font-bold text-slate-800 italic">Ikujiro Nonaka</span> publicaram o artigo
+        <span class="font-bold text-slate-800 italic">"The New New Product Development Game"</span>
+        na Harvard Business Review.
+      </p>
+      <p>
+        A ideia era comparar equipes de desenvolvimento com um time de <b>rugby</b>: o time avança
+        junto, passando a bola entre si, diferente do modelo cascata sequencial.
+      </p>
+      <p>
+        Nos anos 90, <span class="font-bold text-slate-800 italic">Ken Schwaber</span> e
+        <span class="font-bold text-slate-800 italic">Jeff Sutherland</span> formalizaram o Scrum
+        como o framework que conhecemos hoje.
+      </p>
+    </div>
+
+    <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+      <img
+        src="infografico-scrum_23-2148582396.jpg"
+        alt="Infográfico explicativo do Scrum"
+        class="w-full h-auto"
+      />
+    </div>
+  </div>
+
+  <app-tittle-section
+    description="como funciona?"
+    subdescription="O Scrum é baseado em ciclos curtos de trabalho:"
+  ></app-tittle-section>
+
+  <app-sprint-card title="SCRUM"
+    >Um ciclo de trabalho de 1 a 4 semanas para entregar um incremento funcional. Funciona como um
+    mini projeto com início, meio e fim, permitindo inspeção e adaptação contínua.</app-sprint-card
+  >
+
+  <app-tittle-section description="estrutura scrum"></app-tittle-section>
+
+  <div class="max-w-5xl mx-auto">
+    <!-- PAPÉIS -->
+    <h4 class="text-xl font-bold text-slate-700 mb-6 text-center">Papéis</h4>
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <app-scrum-card title="Product Owner">
+        Maximiza o valor do produto e gerencia o Backlog, sendo o elo entre stakeholders e o time.
+      </app-scrum-card>
+      <app-scrum-card title="Scrum Master">
+        Facilitador e líder servidor. Remove impedimentos e garante a saúde do processo Scrum.
+      </app-scrum-card>
+      <app-scrum-card title="Time de Dev">
+        Equipe multidisciplinar que executa o trabalho técnico para entregar o incremento funcional.
+      </app-scrum-card>
+    </div>
+
+    <!-- ARTEFATOS -->
+    <h4 class="text-xl font-bold text-slate-700 mb-6 text-center">Artefatos</h4>
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <app-scrum-card title="Product Backlog">
+        Lista viva de requisitos e melhorias. É a única fonte de verdade para o que deve ser feito
+        no produto.
+      </app-scrum-card>
+      <app-scrum-card title="Sprint Backlog">
+        Seleção de itens do Product Backlog para a Sprint atual, com um plano de execução claro.
+      </app-scrum-card>
+      <app-scrum-card title="Incremento">
+        Resultado final da Sprint: algo "Pronto" (Done), funcional e que adiciona valor real ao
+        projeto.
+      </app-scrum-card>
+    </div>
+
+    <!-- EVENTOS -->
+    <h4 class="text-xl font-bold text-slate-700 mb-6 text-center">Eventos</h4>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <app-scrum-card title="Sprint Planning" [isSmall]="true">
+        Definição do que será feito e qual a meta do ciclo atual.
+      </app-scrum-card>
+      <app-scrum-card title="Daily Scrum" [isSmall]="true">
+        Sincronização diária de 15 min: progresso e impedimentos.
+      </app-scrum-card>
+      <app-scrum-card title="Sprint Review" [isSmall]="true">
+        Inspeção do incremento e coleta de feedback dos stakeholders.
+      </app-scrum-card>
+      <app-scrum-card title="Retrospective" [isSmall]="true">
+        Análise do processo e pessoas para melhoria contínua.
+      </app-scrum-card>
+    </div>
+  </div>
+</app-wrapper-content>
+
+<app-tittle-section
+  description="extreme programming (xp)"
+  subdescription="Erre rápido, aprenda mais rápido ainda"
+></app-tittle-section>
+
+<app-wrapper-content>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+    <!-- Lado Esquerdo: Texto -->
+    <div class="space-y-6 text-lg leading-relaxed text-slate-600">
+      <p>
+        O extreme programming surgiu no final dos anos 90 e foi criado por
+        <span class="font-bold text-slate-800 italic">Kent Beck</span>
+        durante um projeto da chrysler (C3 Project), onde o desenvolvimento estava cheio de
+        problemas.
+      </p>
+      <p>
+        Oque motivou o xp foi a situação da epoca, com codigos cheios de bugs, mudanças constantes
+        do cliente, sistemas dificeis de manter e desenvolvedores perdidos, resultando em projetos
+        lentos e de baixa qualidade, foi ai que kent beck teve uma luz e pensou
+        <b class="text-fema-blue"> E se a gente pegar boas práticas e levar ao extremo?</b>
+      </p>
+      <p>
+        o extremo no nome, não é aleatorio nem força de expressão, é exatamente oque de fato
+        acontece durante a aplicação dessa metodologia de processos
+      </p>
+    </div>
+    <div>
+      <img src="Life-Cycle-of-Extreme-Programming-(XP).webp" alt="" />
+    </div>
+  </div>
+</app-wrapper-content>
+
+<app-tittle-section description="o que significa extremo?"> </app-tittle-section>
+<app-wrapper-content>
+  <div class="overflow-x-auto">
+    <table class="min-w-full table-auto border-collapse border border-gray-200">
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700 border-b">
+            Prática normal
+          </th>
+          <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700 border-b">XP</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-200">
+        <tr>
+          <td class="px-6 py-4 text-sm text-gray-900">Testar às vezes</td>
+          <td class="px-6 py-4 text-sm text-gray-500">Testar o tempo todo</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="px-6 py-4 text-sm text-gray-900">Revisar código às vezes</td>
+          <td class="px-6 py-4 text-sm text-gray-500">Revisar sempre</td>
+        </tr>
+        <tr class="bg-gray-50">
+          <td class="px-6 py-4 text-sm text-gray-900">Integrar no final</td>
+          <td class="px-6 py-4 text-sm text-gray-500">Integrar o tempo todo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</app-wrapper-content>
+
+<app-tittle-section description="como o xp funciona?"></app-tittle-section>
+
+<app-sprint-card title="XP (Extreme Programming)">
+  Focado na excelência da engenharia. Introduziu práticas que hoje são padrão, como:
+
+  <ul class="mt-4 space-y-2">
+    <li><b class="text-fema-blue">Pair Programming:</b> Dois devs em um computador.</li>
+    <li>
+      <b class="text-fema-blue">TDD (Test Driven Development):</b> Escrever o teste antes do código.
+    </li>
+    <li>
+      <b class="text-fema-blue">CI (Integração Contínua):</b> Integrar o código no repositório
+      várias vezes ao dia.
+    </li>
+  </ul>
+</app-sprint-card>
+
+<app-tittle-section
+  description="Valores do XP"
+  subdescription=" Antes de prosseguirmos é importante sabermos os valores que essa
+        metodologia valoriza"
+>
+</app-tittle-section>
+
+<div
+  class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 p-10 transition-all duration-300 hover:shadow-2xl"
+>
+  <!-- Lista estilizada -->
+  <ul class="space-y-4">
+    <li class="flex items-start gap-3 p-4 rounded-lg hover:bg-orange-50 transition">
+      <span class="text-fema-orange text-xl">●</span>
+      <p><strong>Comunicação:</strong> Foco em diálogo constante e claro entre equipe e cliente.</p>
+    </li>
+
+    <li class="flex items-start gap-3 p-4 rounded-lg hover:bg-orange-50 transition">
+      <span class="text-fema-orange text-xl">●</span>
+      <p>
+        <strong>Simplicidade:</strong> Soluções diretas, evitando desperdícios e focando no
+        essencial.
+      </p>
+    </li>
+
+    <li class="flex items-start gap-3 p-4 rounded-lg hover:bg-orange-50 transition">
+      <span class="text-fema-orange text-xl">●</span>
+      <p>
+        <strong>Feedback:</strong> Respostas rápidas com testes, integração contínua e revisões.
+      </p>
+    </li>
+
+    <li class="flex items-start gap-3 p-4 rounded-lg hover:bg-orange-50 transition">
+      <span class="text-fema-orange text-xl">●</span>
+      <p><strong>Coragem:</strong> Tomar decisões difíceis e aceitar mudanças sem medo.</p>
+    </li>
+
+    <li class="flex items-start gap-3 p-4 rounded-lg hover:bg-orange-50 transition">
+      <span class="text-fema-orange text-xl">●</span>
+      <p><strong>Respeito:</strong> Valorizar cada membro da equipe e promover colaboração.</p>
+    </li>
+  </ul>
+</div>
+
+<app-tittle-section
+  description="praticas principais"
+  subdescription=" As principais praticas do xp são:"
+>
+</app-tittle-section>
+
+<section class="mt-16 px-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <app-feature-card icon="👥" title="Pair Programming">
+      Dois desenvolvedores em um único computador: enquanto um digita (piloto), o outro revisa e
+      pensa na estratégia (copiloto).
+    </app-feature-card>
+
+    <app-feature-card icon="🧪" title="TDD">
+      Desenvolvimento Orientado a Testes. Você escreve um teste que falha, faz ele passar com o
+      código mais simples e depois refatora.
+    </app-feature-card>
+
+    <app-feature-card icon="🧹" title="Refatoração">
+      Melhoria contínua da estrutura interna do código sem alterar seu comportamento externo,
+      mantendo o sistema limpo e fácil de entender.
+    </app-feature-card>
+
+    <app-feature-card icon="🔄" title="Integração Contínua">
+      O código é integrado ao repositório principal várias vezes ao dia, garantindo que o sistema
+      esteja sempre em um estado funcional.
+    </app-feature-card>
+
+    <app-feature-card icon="🏠" title="Propriedade Coletiva">
+      Ninguém é "dono" de uma parte específica. Qualquer desenvolvedor tem permissão e capacidade
+      para melhorar qualquer parte do código.
+    </app-feature-card>
+  </div>
+</section>
+
+<app-tittle-section
+  description="KanBan"
+  subdescription="Gerencie o trabalho, não as pessoas."
+></app-tittle-section>
+
+<app-wrapper-content>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16">
+    <!-- Lado Esquerdo: Texto -->
+    <div class="space-y-6 text-lg leading-relaxed text-slate-600 text-justify">
+      <p>
+        O kanban não nasceu do software e nem de uma fabrica de software, ele surgiu na indústria
+        automobilistica, na famosa empresa de carros chamada
+        <span class="font-bold text-slate-800 italic">Toyota</span>
+        após a segunda guerra, a toyota precisava produzir mais carros, reduzir desperdícios de
+        peças e ser eficiente com poucos recursos
+      </p>
+      <p>
+        Foi então que surge uma ideia genial, eles criaram um sistema baseado em
+        <b class="text-fema-blue"> demanda real</b>, chamado de
+        <b class="text-fema-blue"> kanban (significa “cartão” ou “sinal” em japonês)</b>
+      </p>
+      <p>
+        Sendo o mais simples da trindade (xp,scrum e kanban), sendo muito mais facil de começar,
+        porem nao necessariamente mais facil de o dominar de forma efetiva
+      </p>
+    </div>
+    <div>
+      <img
+        src="quadro-de-tarefas-de-scrum-plano-com-notas-de-papel-colorido_88138-931.avif"
+        alt=""
+      />
+    </div>
+  </div>
+</app-wrapper-content>
+
+<app-tittle-section
+  description="Como funciona?"
+  subdescription="A base é MUITO simples"
+></app-tittle-section>
+
+<div class="flex flex-col max-w-5xl mx-auto text-center">
+  <!-- Título -->
+  <h3 class="text-3xl font-black text-fema-orange uppercase">Quadro Kanban</h3>
+
+  <!-- Descrição -->
+  <p class="text-gray-500 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
+    Um exemplo clássico é um quadro dividido em colunas que representam o fluxo de trabalho:
+    <span class="font-semibold text-gray-700">A fazer → Fazendo → Concluído</span>
+  </p>
+
+  <!-- Imagem destacada -->
+  <div class="mt-10">
+    <img
+      src="quadroKanvan.png"
+      alt="Exemplo de quadro Kanban"
+      class="mx-auto rounded-2xl shadow-lg border border-gray-200 hover:scale-[1.02] transition duration-300"
+    />
+  </div>
+</div>
+
+<app-tittle-section description="Princípios principais"></app-tittle-section>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+  <app-feature-card icon="📌" title="Visualizar o Trabalho">
+    Através do quadro (To Do, Doing, Done), o fluxo de valor se torna visível para todos, permitindo
+    identificar gargalos rapidamente.
+  </app-feature-card>
+
+  <app-feature-card icon="🚧" title="Limitar o WIP">
+    Definir um limite de tarefas em andamento. Isso evita a sobrecarga da equipe e garante que o
+    foco esteja em terminar as tarefas, não apenas começá-las.
+  </app-feature-card>
+
+  <app-feature-card icon="🌊" title="Gerenciar o Fluxo">
+    O objetivo é criar um fluxo contínuo e previsível, onde as tarefas "deslizam" pelo quadro sem
+    interrupções ou esperas desnecessárias.
+  </app-feature-card>
+
+  <app-feature-card icon="📢" title="Políticas Explícitas">
+    As regras do processo (como o critério para uma tarefa mudar de coluna) devem ser conhecidas por
+    todos, reduzindo a ambiguidade.
+  </app-feature-card>
+
+  <app-feature-card icon="🔄" title="Melhoria Colaborativa">
+    O Kanban incentiva a evolução constante do processo através de dados reais (como o tempo de
+    entrega), e não apenas intuição.
+  </app-feature-card>
+</div>
+
+<app-call-action
+  title="E qual o melhor o metodo?"
+  description=" Não tem melhor metodo, depende da situação, vamos comparar os três"
+></app-call-action>
+
+<app-title-main
+  subdescription="Finalizando"
+  maindescription=" Comparando os metodos"
+></app-title-main>
+
+<app-tittle-section description="Comparação entre Metodologias"></app-tittle-section>
+<app-wrapper-content>
+  <!-- Tabela -->
+  <div class="overflow-x-auto rounded-2xl shadow-lg border border-gray-200">
+    <table class="w-full text-left border-collapse">
+      <!-- Cabeçalho -->
+      <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
+        <tr>
+          <th class="p-4">Critério</th>
+          <th class="p-4">Scrum</th>
+          <th class="p-4">Extreme Programming</th>
+          <th class="p-4">Kanban</th>
+        </tr>
+      </thead>
+
+      <!-- Corpo -->
+      <tbody class="text-gray-600 text-sm">
+        <tr class="border-t hover:bg-orange-50 transition">
+          <td class="p-4 font-semibold">🎯 Foco principal</td>
+          <td class="p-4">Gestão do projeto</td>
+          <td class="p-4">Qualidade do código</td>
+          <td class="p-4">Fluxo de trabalho</td>
+        </tr>
+
+        <tr class="border-t hover:bg-orange-50 transition">
+          <td class="p-4 font-semibold">🧠 Objetivo</td>
+          <td class="p-4">Organizar o time e entregas</td>
+          <td class="p-4">Reduzir bugs e melhorar código</td>
+          <td class="p-4">Otimizar produtividade</td>
+        </tr>
+
+        <tr class="border-t hover:bg-orange-50 transition">
+          <td class="p-4 font-semibold">⏱️ Estrutura</td>
+          <td class="p-4">Sprints (ciclos fixos)</td>
+          <td class="p-4">Iterações + práticas contínuas</td>
+          <td class="p-4">Fluxo contínuo</td>
+        </tr>
+
+        <tr class="border-t hover:bg-orange-50 transition">
+          <td class="p-4 font-semibold">👥 Papéis</td>
+          <td class="p-4">PO, Scrum Master, Time</td>
+          <td class="p-4">Não obrigatórios</td>
+          <td class="p-4">Não obrigatórios</td>
+        </tr>
+
+        <tr class="border-t hover:bg-orange-50 transition">
+          <td class="p-4 font-semibold">📅 Reuniões</td>
+          <td class="p-4">Daily, review, planning</td>
+          <td class="p-4">Não fixas</td>
+          <td class="p-4">Não obrigatórias</td>
+        </tr>
+
+        <tr class="border-t hover:bg-orange-50 transition">
+          <td class="p-4 font-semibold">🔧 Práticas técnicas</td>
+          <td class="p-4">Poucas</td>
+          <td class="p-4">TDD, pair programming...</td>
+          <td class="p-4">Nenhuma obrigatória</td>
+        </tr>
+
+        <tr class="border-t hover:bg-orange-50 transition">
+          <td class="p-4 font-semibold">🔄 Mudanças</td>
+          <td class="p-4">Entre sprints</td>
+          <td class="p-4">A qualquer momento</td>
+          <td class="p-4">A qualquer momento</td>
+        </tr>
+
+        <tr class="border-t hover:bg-orange-50 transition">
+          <td class="p-4 font-semibold">📦 Entregas</td>
+          <td class="p-4">Final de cada sprint</td>
+          <td class="p-4">Frequentes e pequenas</td>
+          <td class="p-4">Contínuas</td>
+        </tr>
+
+        <tr class="border-t hover:bg-orange-50 transition">
+          <td class="p-4 font-semibold">📋 Organização</td>
+          <td class="p-4">Backlogs</td>
+          <td class="p-4">Histórias + testes</td>
+          <td class="p-4">Quadro visual</td>
+        </tr>
+
+        <tr class="border-t hover:bg-orange-50 transition">
+          <td class="p-4 font-semibold">🚧 Controle</td>
+          <td class="p-4">Planejamento por sprint</td>
+          <td class="p-4">Qualidade do código</td>
+          <td class="p-4">Limite de WIP</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</app-wrapper-content>
+
+<app-call-action title="para finalizar uma pequena prova"></app-call-action>
+
+<app-footer></app-footer>

@@ -1,0 +1,147 @@
+<div class="flex min-h-screen bg-white lg:p-3">
+  <!-- Painel lateral (só desktop) -->
+  <aside class="relative hidden flex-col justify-between overflow-hidden rounded-3xl bg-blue-950 p-12 lg:flex lg:w-1/2">
+    <!-- Brilho laranja -->
+    <div
+      class="pointer-events-none absolute -bottom-40 -right-40 h-[520px] w-[520px] rounded-full"
+      style="background: radial-gradient(circle, rgba(249, 115, 22, 0.35) 0%, rgba(249, 115, 22, 0) 65%)"
+    ></div>
+
+    <!-- Arcos concêntricos -->
+    <svg
+      class="pointer-events-none absolute -right-24 top-1/2 h-[640px] w-[640px] -translate-y-1/2"
+      viewBox="0 0 640 640"
+      fill="none"
+      aria-hidden="true"
+    >
+      <circle cx="320" cy="320" r="120" stroke="white" stroke-opacity="0.08" />
+      <circle cx="320" cy="320" r="190" stroke="white" stroke-opacity="0.06" />
+      <circle cx="320" cy="320" r="260" stroke="white" stroke-opacity="0.04" />
+      <circle cx="320" cy="320" r="318" stroke="white" stroke-opacity="0.03" />
+      <circle cx="440" cy="320" r="5" fill="#f97316" />
+      <circle cx="320" cy="130" r="3" fill="white" fill-opacity="0.5" />
+    </svg>
+
+    <div class="relative flex items-center gap-3">
+      <span class="grid h-9 w-9 place-items-center rounded-lg bg-orange-500 text-sm font-bold text-blue-950">
+        MA
+      </span>
+      <span class="text-sm text-blue-200">Métodos Ágeis · FEMA</span>
+    </div>
+
+    <div class="relative">
+      <h1 class="text-5xl font-light leading-[1.1] tracking-tight text-white">
+        Métodos Ágeis<br />
+        <span class="font-semibold">na prática.</span>
+      </h1>
+      <p class="mt-5 max-w-sm text-base leading-relaxed text-blue-200/70">
+        Gerencie a prova, acompanhe as tentativas e analise os resultados em um só lugar.
+      </p>
+    </div>
+
+    <p class="relative text-xs text-blue-300/60">Projeto de curricularização · ADS</p>
+  </aside>
+
+  <!-- Formulário -->
+  <main class="flex flex-1 items-center justify-center px-6 py-12">
+    <div class="w-full max-w-sm">
+      <!-- Marca no mobile -->
+      <div class="mb-12 flex items-center gap-3 lg:hidden">
+        <span class="grid h-9 w-9 place-items-center rounded-lg bg-orange-500 text-sm font-bold text-blue-950">
+          MA
+        </span>
+        <span class="text-sm text-slate-500">Métodos Ágeis · FEMA</span>
+      </div>
+
+      <p class="text-sm font-medium text-orange-500">Painel administrativo</p>
+      <h2 class="mt-2 text-4xl font-semibold tracking-tight text-blue-950">Acesse sua conta</h2>
+      <p class="mt-2 text-sm text-slate-500">Informe seu nome de usuário e senha.</p>
+
+      @if (erro) {
+        <div class="mt-6 rounded-xl border border-red-100 bg-red-50 px-4 py-3 text-sm text-red-700">
+          {{ erro }}
+        </div>
+      }
+
+      <form (ngSubmit)="entrar()" class="mt-10 flex flex-col gap-5">
+        <div class="flex flex-col gap-2">
+          <label for="nome" class="text-sm font-medium text-slate-700">Nome de usuário</label>
+          <div class="relative">
+            <svg
+              class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 20c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5" />
+            </svg>
+            <input
+              id="nome"
+              name="nome"
+              type="text"
+              autocomplete="username"
+              [(ngModel)]="nome"
+              placeholder="Seu nome de usuário"
+              class="h-12 w-full rounded-xl border border-slate-200 bg-white pl-11 pr-4 text-base text-slate-900 placeholder:text-slate-400 transition focus:border-orange-500 focus:shadow-[0_0_0_4px_rgba(249,115,22,0.12),0_8px_24px_-8px_rgba(249,115,22,0.35)] focus:outline-none"
+            />
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <label for="senha" class="text-sm font-medium text-slate-700">Senha</label>
+          <div class="relative">
+            <svg
+              class="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="5" y="11" width="14" height="9" rx="2" />
+              <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+            </svg>
+            <input
+              id="senha"
+              name="senha"
+              [type]="mostrarSenha ? 'text' : 'password'"
+              autocomplete="current-password"
+              [(ngModel)]="senha"
+              placeholder="Sua senha"
+              class="h-12 w-full rounded-xl border border-slate-200 bg-white pl-11 pr-20 text-base text-slate-900 placeholder:text-slate-400 transition focus:border-orange-500 focus:shadow-[0_0_0_4px_rgba(249,115,22,0.12),0_8px_24px_-8px_rgba(249,115,22,0.35)] focus:outline-none"
+            />
+            <button
+              type="button"
+              (click)="mostrarSenha = !mostrarSenha"
+              class="absolute inset-y-0 right-0 cursor-pointer border-none bg-transparent px-4 text-xs font-medium text-slate-400 transition hover:text-blue-950"
+            >
+              {{ mostrarSenha ? 'Ocultar' : 'Mostrar' }}
+            </button>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          [disabled]="!nome || !senha || carregando"
+          class="mt-4 h-12 w-full cursor-pointer rounded-xl border border-blue-900 bg-linear-to-b from-blue-900 to-blue-950 text-base font-medium text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_12px_28px_-12px_rgba(23,37,84,0.7)] transition hover:from-blue-800 hover:to-blue-950 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          {{ carregando ? 'Entrando...' : 'Entrar' }}
+        </button>
+      </form>
+
+      <a
+        routerLink="/"
+        class="mt-8 inline-block text-sm text-slate-500 underline underline-offset-4 transition hover:text-blue-950"
+      >
+        Voltar para a prova
+      </a>
+    </div>
+  </main>
+</div>

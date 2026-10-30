@@ -1,0 +1,6 @@
+.circuloProgresso {
+  stroke: var(--color-fema-orange);
+  stroke-linecap: round;
+
+  transition: stroke-dashoffset 1.5s ease-out;
+}

@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+@theme {
+  --color-fema-blue: #004077;
+  --color-fema-orange: #f39221;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Aplica a fonte padrão e melhora a renderização de texto para leitura de provas */
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,11 @@
+<button 
+  (click)="openModal = true" 
+  [disabled]="!isExamUnlocked" 
+  [class.bg-gray-400]="!isExamUnlocked" 
+  [class.text-gray]="!isExamUnlocked"
+  [class.bg-fema-orange]="isExamUnlocked"
+  class="w-full md:w-auto text-white font-bold px-8 py-2 rounded-full shadow-lg hover:scale-105 transition-transform active:scale-95 text-sm md:text-base">
+  Iniciar Prova
+</button>
+
+<app-dialog-comecar-prova [(visivel)]="openModal"></app-dialog-comecar-prova>

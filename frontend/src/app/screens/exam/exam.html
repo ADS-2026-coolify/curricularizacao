@@ -1,0 +1,363 @@
+@if (carregando) {
+
+  <!-- ========================= -->
+  <!-- CARREGAMENTO -->
+  <!-- ========================= -->
+
+  <div class="flex min-h-screen items-center justify-center bg-slate-50">
+    <div class="flex flex-col items-center gap-4">
+      <p-progress-spinner
+        styleClass="w-12 h-12"
+        strokeWidth="4"
+      />
+
+      <p class="text-sm text-slate-500">
+        Carregando sua prova...
+      </p>
+    </div>
+  </div>
+
+} @else if (provaDTO) {
+
+  <!-- ========================= -->
+  <!-- RESULTADO -->
+  <!-- ========================= -->
+
+  @if (acertos !== null) {
+
+    <div
+      class="min-h-screen bg-slate-50 flex items-center justify-center px-4 py-10"
+    >
+      <div
+        class="w-full max-w-xl bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 flex flex-col items-center gap-8"
+      >
+
+        <!-- TÍTULO -->
+
+        <div class="text-center">
+          <span
+            class="text-xs font-semibold uppercase tracking-wider text-fema-orange bg-orange-50 px-3 py-1 rounded-full"
+          >
+            Prova finalizada
+          </span>
+
+          <h1
+            class="text-3xl font-bold text-fema-blue mt-4"
+          >
+            Parabéns!
+          </h1>
+
+          <p class="text-slate-500 mt-2">
+            Você finalizou sua avaliação.
+          </p>
+        </div>
+
+
+        <!-- CÍRCULO DE PORCENTAGEM -->
+
+        <div class="relative w-52 h-52">
+
+          <svg
+            viewBox="0 0 120 120"
+            class="w-full h-full -rotate-90"
+          >
+
+            <!-- círculo de fundo -->
+
+            <circle
+              cx="60"
+              cy="60"
+              r="50"
+              fill="none"
+              stroke="#e2e8f0"
+              stroke-width="10"
+            />
+
+
+            <!-- círculo de progresso -->
+
+            <circle
+              class="circuloProgresso"
+              cx="60"
+              cy="60"
+              r="50"
+              fill="none"
+              stroke-width="10"
+              pathLength="100"
+              stroke-dasharray="100"
+              [attr.stroke-dashoffset]="100 - (porcentagem ?? 0)"
+            />
+
+          </svg>
+
+
+          <!-- porcentagem central -->
+
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center"
+          >
+            <span
+              class="text-4xl font-bold text-fema-blue"
+            >
+              {{ porcentagem }}%
+            </span>
+
+            <span
+              class="text-xs uppercase tracking-wider text-slate-400 mt-1"
+            >
+              Aproveitamento
+            </span>
+          </div>
+
+        </div>
+
+
+        <!-- ACERTOS -->
+
+        <div class="text-center">
+
+          <p class="text-slate-500">
+            Você acertou
+          </p>
+
+          <p
+            class="text-2xl font-bold text-fema-blue mt-1"
+          >
+            {{ acertos }} de {{ provaDTO.listaPerguntas.length }}
+          </p>
+
+          <p class="text-sm text-slate-400 mt-2">
+            questões da avaliação
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+  } @else {
+
+    <!-- ========================= -->
+    <!-- PROVA -->
+    <!-- ========================= -->
+
+    <div
+      class="min-h-screen bg-slate-50 text-slate-800 py-8 px-4 flex flex-col items-center"
+    >
+
+      <div
+        class="w-full max-w-3xl bg-white shadow-sm border border-slate-200 rounded-2xl p-6 sm:p-10 flex flex-col gap-8"
+      >
+
+        <!-- ========================= -->
+        <!-- HEADER -->
+        <!-- ========================= -->
+
+        <div
+          class="border-b border-slate-100 pb-6 flex flex-col sm:flex-row justify-between items-center gap-4"
+        >
+
+          <div>
+
+            <span
+              class="text-xs font-semibold uppercase tracking-wider text-fema-orange bg-orange-50 px-3 py-1 rounded-full"
+            >
+              Avaliação Oficial
+            </span>
+
+            <h1
+              class="text-2xl font-bold text-fema-blue mt-2"
+            >
+              {{ provaDTO.titulo }}
+            </h1>
+
+          </div>
+
+
+          <div
+            class="flex items-center gap-2 text-sm text-slate-500 bg-slate-100 px-4 py-2 rounded-lg font-medium"
+          >
+            <i class="pi pi-clock text-fema-orange"></i>
+
+            <span>
+              Duração: {{ provaDTO.duracaoMinutos }} min
+            </span>
+          </div>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- PERGUNTA -->
+        <!-- ========================= -->
+
+        <div class="flex flex-col gap-6">
+
+          <!-- contador -->
+
+          <div
+            class="flex items-center justify-between"
+          >
+
+            <div
+              class="text-xs font-bold text-slate-400 uppercase tracking-wider"
+            >
+              Questão
+              {{ indiceAtual + 1 }}
+              de
+              {{ provaDTO.listaPerguntas.length }}
+            </div>
+
+            <div
+              class="text-xs font-medium text-slate-400"
+            >
+              {{
+                Math.round(
+                  ((indiceAtual + 1) /
+                    provaDTO.listaPerguntas.length) *
+                    100
+                )
+              }}%
+            </div>
+
+          </div>
+
+
+          <!-- título -->
+
+          <h4
+            class="text-lg font-semibold text-fema-blue"
+          >
+            {{ provaDTO.listaPerguntas[indiceAtual].titulo }}
+          </h4>
+
+
+          <!-- enunciado -->
+
+          <p
+            class="text-slate-600 text-base leading-relaxed bg-slate-50/50 p-4 rounded-xl border border-slate-100"
+          >
+            {{ provaDTO.listaPerguntas[indiceAtual].enunciado }}
+          </p>
+
+
+          <!-- ========================= -->
+          <!-- ALTERNATIVAS -->
+          <!-- ========================= -->
+
+          <div class="flex flex-col gap-3 mt-2">
+
+            @for (
+              alternativa
+              of provaDTO.listaPerguntas[indiceAtual].alternativas;
+              track alternativa.id
+            ) {
+
+              <label
+                class="group relative flex items-start gap-3 p-4 rounded-xl border border-slate-200 bg-white hover:border-fema-blue/50 hover:bg-slate-50 transition-all cursor-pointer"
+              >
+
+                <input
+                  type="radio"
+                  name="alternativa"
+                  [value]="alternativa.id"
+
+                  (change)="
+                    respostasSelecionadas[
+                      provaDTO.listaPerguntas[indiceAtual].id
+                    ] = alternativa.id
+                  "
+
+                  [checked]="
+                    respostasSelecionadas[
+                      provaDTO.listaPerguntas[indiceAtual].id
+                    ] === alternativa.id
+                  "
+
+                  class="mt-1 h-4 w-4 text-fema-blue border-slate-300 focus:ring-fema-orange"
+                />
+
+
+                <span
+                  class="text-slate-700 text-sm sm:text-base select-none leading-normal"
+                >
+                  {{ alternativa.descricao }}
+                </span>
+
+              </label>
+
+            }
+
+          </div>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- NAVEGAÇÃO -->
+        <!-- ========================= -->
+
+        <div
+          class="border-t border-slate-100 pt-6 flex justify-between items-center gap-4"
+        >
+
+          <!-- anterior -->
+
+          <button
+            class="px-5 py-2.5 rounded-xl border border-slate-200 text-slate-600 font-medium text-sm hover:bg-slate-100 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
+            [disabled]="indiceAtual === 0"
+            (click)="indiceAtual -= 1"
+          >
+            <i class="pi pi-arrow-left mr-2"></i>
+            Anterior
+          </button>
+
+
+          <!-- última questão -->
+
+          @if (
+            indiceAtual ===
+            provaDTO.listaPerguntas.length - 1
+          ) {
+
+            <button
+              class="px-6 py-2.5 rounded-xl bg-fema-orange text-white font-medium text-sm hover:opacity-90 transition-all shadow-sm disabled:opacity-40 disabled:cursor-not-allowed"
+              [disabled]="
+                !respostasSelecionadas[
+                  provaDTO.listaPerguntas[indiceAtual].id
+                ]
+              "
+              (click)="finalizarProva()"
+            >
+              Finalizar prova
+              <i class="pi pi-check ml-2"></i>
+            </button>
+
+          } @else {
+
+            <!-- próxima -->
+
+            <button
+              class="px-6 py-2.5 rounded-xl bg-fema-blue text-white font-medium text-sm hover:bg-blue-900 transition-all shadow-sm disabled:opacity-40 disabled:cursor-not-allowed"
+              [disabled]="
+                !respostasSelecionadas[
+                  provaDTO.listaPerguntas[indiceAtual].id
+                ]
+              "
+              (click)="indiceAtual += 1"
+            >
+              Próxima Questão
+              <i class="pi pi-arrow-right ml-2"></i>
+            </button>
+
+          }
+
+        </div>
+
+      </div>
+
+    </div>
+
+  }
+
+}
