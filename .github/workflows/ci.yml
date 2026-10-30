@@ -1,0 +1,22 @@
+name: compilar_aplicacao
+
+on: push
+
+jobs:
+ carregar_backend:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Baixar o código
+       uses: actions/checkout@v4
+ 
+     - name: instalar java 21
+       uses: actions/setup-java@v4
+       with:
+         distribution: 'temurin'
+         java-version: '21'
+
+     - name: checar java
+       run: java -version
+
+     - name: compilar backend
+       run: cd backend && ./mvnw package
